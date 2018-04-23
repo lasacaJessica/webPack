@@ -14,12 +14,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
          plugins: [
           new CleanWebpackPlugin(['dist']),
           new HtmlWebpackPlugin({
-          title: 'Output Management'
+          title: 'Development'
           })
           ],
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      publicPath: '/'
+    //publicPath: '/'  //in the instruction but have to exclude due to when building problem occurred on the path adding '/' to bundle.js in index.html
     },
    };
